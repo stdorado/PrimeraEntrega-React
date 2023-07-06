@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+
+.navbar{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 12px 12px #252b3185;
+}
+.navegacion{
+  padding: 0.8%;
+   
+}
+.navegacion a{
+  color: rgb(0, 0, 0);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+
+}
+

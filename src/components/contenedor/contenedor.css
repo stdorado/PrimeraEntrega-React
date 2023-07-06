@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+body{
+    background-color: rgb(176, 176, 176);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contenedor-saludo{
+    text-align: center;
+    position: relative;
+    top: 300px;
+}
