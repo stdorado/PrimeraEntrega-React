@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 
-function DetailContainer({ products }) { 
-return (
+
+const ItemDetail = ({ products }) => {
+  return (
     <div className="cardInfo">
       <div>
         <img width={300} src={products.imagen} alt="imagen" />
@@ -21,4 +21,5 @@ return (
     </div>
   );
 }
-export default DetailContainer;
+
+export default ItemDetail;
