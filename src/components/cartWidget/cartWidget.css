@@ -1,0 +1,18 @@
+.Carrito-ubicacion{
+    position: relative;
+    left: 40%;
+    bottom: 65px;
+    width:40px;
+    height: 40px;
+    background-color: rgb(185, 185, 190);
+    border: 2px solid black;
+    border-radius: 250px;
+}
+
+
+#numeroProductos{
+    color: rgb(1, 1, 1);
+    position: relative;
+    left: 25px;
+    bottom: 40px;
+}
