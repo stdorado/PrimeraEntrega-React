@@ -1,28 +1,28 @@
-import React from 'react';
-import { ItemCount } from '../ItemCount/ItemCount';
+import {useState, useEffect} from "react"
+import ItemDetail from "../ItemDetail/ItemDetail"
+import { useParams } from "react-router-dom"
+import { getProductosById } from "../asyncMocks/data"
 
-const ItemDetail = ({ products }) => {
-  if (!products) {
-    return <p>Loading...</p>;
-  }
+const ItemDetailContainer = () => {
+    const [product, setProduct] = useState(null)
 
-  return (
-    <div className="cardInfo">
-      <div>
-        <img width={300} src={products.imagen} alt={products.nombre} />
-      </div>
-      <div className="cardInfoDetails">
-        <div>
-          <h3 className="cardInfoTitle">{products.nombre}</h3>
-          <p className="cardInfoDesc">{products.descripcion}</p>
+    const { itemId } = useParams()
+
+    useEffect(() => {
+        getProductosById(itemId)
+            .then(response => {
+                setProduct(response)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }, [itemId])
+
+    return(
+        <div className="ItemDetailContainer">
+            <ItemDetail {...product} />
         </div>
-        <div>
-          <h5 className="cardInfoPrice">Price: $ {products.precio}</h5>
-        </div>
-        <ItemCount stock={products.stock} />
-      </div>
-    </div>
-  );
+    )
 }
 
-export default ItemDetail;
+export default ItemDetailContainer
