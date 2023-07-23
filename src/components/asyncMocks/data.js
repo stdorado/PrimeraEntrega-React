@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const productos = [{
     
     id: "1",
@@ -159,7 +158,7 @@ export function getProductosById(itemId) {
       resolve(productRequested);
     }, 500);
   });
-=======
+
 const productos = [{
     
     id: "1",
@@ -320,5 +319,5 @@ export function getProductosById(itemId) {
       resolve(productRequested);
     }, 500);
   });
->>>>>>> 639f766c2e6a6f932472f55206d3f8d2caa46c1e
+
 }

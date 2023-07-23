@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import "./cartWidget.css"
 
 
@@ -17,7 +17,7 @@ const CarritoCompras = ()=>{
 }
 
 
-=======
+
 import "./cartWidget.css"
 
 
@@ -36,5 +36,5 @@ const CarritoCompras = ()=>{
 }
 
 
->>>>>>> 639f766c2e6a6f932472f55206d3f8d2caa46c1e
+
 export default CarritoCompras;
