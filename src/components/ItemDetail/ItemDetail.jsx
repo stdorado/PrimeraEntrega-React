@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import "./ItemDetail.css"
 import { ItemCount } from '../ItemCount/ItemCount';
+import { CartContext } from '../../Context/Context';
 
 
 const ItemDetail = ({ imagen,nombre,descripcion,precio,stock }) => {
@@ -17,7 +19,7 @@ const ItemDetail = ({ imagen,nombre,descripcion,precio,stock }) => {
         <div>
           <h5 className="cardInfoPrice">Price: $ {precio}</h5>
         </div>
-        <ItemCount initial={1} stock={5} onAdd={(valor)=> console.log("compraste ")+ valor } />
+        <ItemCount  initial={1} stock={stock} onAdd={(valor)=> console.log("compraste ")+ valor } />
       </div>
     </div>
   );

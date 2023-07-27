@@ -6,7 +6,8 @@
     padding: 3%;
     border: 2px solid black;
     position: relative;
-    background-color: rgb(186, 227, 221);
+    background-color: rgb(128, 181, 203);
+    margin-top: 0;
 }
 
 .tituloProductos{

@@ -7,7 +7,7 @@ const productos = [{
     categorias : "Celulares",
     descripcion:
       "Smartphone de última generación con pantalla OLED y cámara de alta resolución.",
-    imagen: "https://img.freepik.com/vector-gratis/dispositivo-telefono-inteligente-realista_52683-29765.jpg?w=740&t=st=1689949177~exp=1689949777~hmac=829bfa9f7eed08e2390e1b2a161c6266c41a0aae57e58f680859edcb5504a0d2",
+    imagen: "https://img.freepik.com/foto-gratis/equilibrio-telefonos-inteligentes-fondo-azul_23-2150271748.jpg?w=740&t=st=1690231933~exp=1690232533~hmac=3c838ea9c42c1fc4f77d95de8e7fc651a478dd31117458e036d22061fd676e2f",
   },
   {
     id: "2",
@@ -17,7 +17,7 @@ const productos = [{
     categorias : "Celulares",
     descripcion:
       "Portátil ultradelgado con procesador de alta velocidad y tarjeta gráfica dedicada.",
-    imagen: "https://img.freepik.com/vector-gratis/dispositivo-telefono-inteligente-realista_52683-29765.jpg?w=740&t=st=1689949177~exp=1689949777~hmac=829bfa9f7eed08e2390e1b2a161c6266c41a0aae57e58f680859edcb5504a0d2",
+      imagen: "https://img.freepik.com/foto-gratis/equilibrio-telefonos-inteligentes-fondo-azul_23-2150271748.jpg?w=740&t=st=1690231933~exp=1690232533~hmac=3c838ea9c42c1fc4f77d95de8e7fc651a478dd31117458e036d22061fd676e2f",
   },
   {
     id: "3",
@@ -27,7 +27,7 @@ const productos = [{
     categorias : "Celulares",
     descripcion:
       "Auriculares inalámbricos con cancelación de ruido y batería de larga duración.",
-    imagen: "https://img.freepik.com/vector-gratis/dispositivo-telefono-inteligente-realista_52683-29765.jpg?w=740&t=st=1689949177~exp=1689949777~hmac=829bfa9f7eed08e2390e1b2a161c6266c41a0aae57e58f680859edcb5504a0d2",
+      imagen: "https://img.freepik.com/foto-gratis/equilibrio-telefonos-inteligentes-fondo-azul_23-2150271748.jpg?w=740&t=st=1690231933~exp=1690232533~hmac=3c838ea9c42c1fc4f77d95de8e7fc651a478dd31117458e036d22061fd676e2f",
   },
   {
     id: "4",
