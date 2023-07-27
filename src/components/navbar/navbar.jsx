@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import CarritoCompras from '../cartWidget/cartWidget';
 import './navbar.css';
 import { NavLink } from "react-router-dom"
