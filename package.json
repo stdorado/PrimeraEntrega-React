@@ -2,7 +2,7 @@
   "name": "proyecto-ecommerce",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http:/stdorado.github.io/React-Proyecto-Ecommerce",
+  "homepage": "/React-Proyecto-Ecommerce",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
