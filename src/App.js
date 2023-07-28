@@ -12,7 +12,6 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/React-Proyecto-Ecommerce" element={<ItemListContainer />} />
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
           <Route path="/Detalle/:itemId" element={<DetailContainer />} />
