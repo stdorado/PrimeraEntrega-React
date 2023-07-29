@@ -1,16 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './components/navbar/navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import DetailContainer from './components/ItemDetailContainer/itemDetailContainer';
+import BarraNavegacion from './components/navbar/navbar';
 
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Navbar />
+        <BarraNavegacion/>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />

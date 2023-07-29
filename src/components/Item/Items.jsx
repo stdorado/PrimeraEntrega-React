@@ -2,6 +2,7 @@ import React from 'react'
 import "./items.css"
 import { ItemCount } from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
+import { button } from 'react-bootstrap';
 
 const Items = ({id,nombre,precio,descripcion,imagen,stock})=> {
   return (
@@ -22,7 +23,7 @@ const Items = ({id,nombre,precio,descripcion,imagen,stock})=> {
     </section>
     <footer className='PieProductos'>
     <ItemCount initial={1} stock={stock} onAdd={(valor)=> console.log("compraste ")+ valor } />
-    <Link to={`/Detalle/${id}`} className='Opciones'><button className='btn btn-warning '>Detalles</button></Link>
+    <Link to={`/Detalle/${id}`} className='Opciones'> <button variant='warning' ></button> Detalles </Link>
     </footer>
     </article>
   )
