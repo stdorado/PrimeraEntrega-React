@@ -8,9 +8,9 @@ const Items = ({id,nombre,precio,descripcion,imagen,stock})=> {
   return (
     <article className='targetaProducto'>
     <header className='Productos'>
-     <h2 className='tituloProductos'>
+    <h2 className='tituloProductos'>
       {nombre}
-     </h2>
+    </h2>
     </header>
     <picture>
       <img src={imagen} alt={nombre} className='ImagenProductos' width={"300px"} />
