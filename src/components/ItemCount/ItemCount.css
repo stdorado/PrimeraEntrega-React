@@ -15,11 +15,10 @@
 }
 
 .comprar{
-    background-color: rgb(161, 11, 159);
-    color: white;
     position: relative;
     left: 100px;
     top: 38px;
+    
 }
 
 .sumar{
