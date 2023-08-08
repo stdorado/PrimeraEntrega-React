@@ -4,8 +4,19 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import { CartContext } from '../../Context/Context';
 
 
-const ItemDetail = ({ imagen,nombre,descripcion,precio,stock }) => {
-  
+const ItemDetail = ({ id,imagen,nombre,descripcion,precio,stock }) => {
+  const [quantityAded, setquantityAded] = useState(0)
+
+  const {AgregarItem} = useContext(CartContext)
+
+  const handleOnAdd = (quantity) =>{
+    setquantityAded(quantity)
+
+    const item ={
+     id, nombre,precio,imagen
+    }
+AgregarItem(item,quantity)
+  }
   return (
     <div className="cardInfo">
       <div>
@@ -19,7 +30,7 @@ const ItemDetail = ({ imagen,nombre,descripcion,precio,stock }) => {
         <div>
           <h5 className="cardInfoPrice">Price: $ {precio}</h5>
         </div>
-        <ItemCount  initial={1} stock={stock} onAdd={(valor)=> console.log("compraste ")+ valor } />
+        <ItemCount  initial={1} stock={stock}/>
       </div>
     </div>
   );

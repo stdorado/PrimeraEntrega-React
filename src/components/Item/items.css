@@ -1,20 +1,11 @@
 
-.targetaProducto{
+.Alinear-productos{
     display: inline-block;
-    width: 500px;
-    margin-left: 0.3%;
-    padding: 3%;
-    border: 2px solid black;
-    position: relative;
-    background-color: rgb(128, 181, 203);
-    margin-top: 0;
+    justify-content: space-around;
+    width: 400px;
+    margin: 3.5%;
 }
 
-.tituloProductos{
-    font-size: 20px;
-}
-
-.DescripcionProdcto{
-    font-size: 30px;
-    text-align: center;
+.card{
+    padding: 30px;
 }

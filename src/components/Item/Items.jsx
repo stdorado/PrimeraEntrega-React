@@ -1,31 +1,40 @@
-import React from 'react'
-import "./items.css"
-import { ItemCount } from '../ItemCount/ItemCount'
-import { Link } from 'react-router-dom'
+import React, { useContext, useState } from 'react';
+import "./items.css";
+import { ItemCount } from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../Context/Context';
 
+const Items = ({ id, nombre, precio, descripcion, imagen, stock }) => {
+  const { AgregarItem } = useContext(CartContext);
+  const [count, setCount] = useState(1); // Maneja el estado local de Count
 
-const Items = ({id,nombre,precio,descripcion,imagen,stock})=> {
+  const handleBuyClick = () => {
+    AgregarItem({
+      id: id,
+      nombre: nombre,
+      precio: precio,
+      imagen: imagen,
+      descripcion: descripcion
+    }, count);
+  };
+
   return (
-    <article className='targetaProducto'>
-    <header className='Productos'>
-    <h2 className='tituloProductos'>
-      {nombre}
-    </h2>
-    </header>
-    <picture>
-      <img src={imagen} alt={nombre} className='ImagenProductos' width={"300px"} />
-    </picture>
-    <section>
-      <p className='DescripcionProducto'> {descripcion} </p>
-    </section>
-    <section>
-      <p className='PrecioProducto'> Precio : {precio} </p>
-    </section>
-    <footer className='PieProductos'>
-    <ItemCount initial={1} stock={stock} onAdd={(valor)=> console.log("compraste ")+ valor } />
-    <Link to={`/Detalle/${id}`} className='Opciones'> <button>Detalles</button>  </Link>
-    </footer>
-    </article>
-  )
+    <div className='Alinear-productos'>
+      <div class="card" >
+        <img src={imagen} class="card-img" alt={nombre} />
+        <div class="card-body">
+          <h2 class="card-title">{nombre}</h2>
+          <h5 className='card-title'>{descripcion}</h5>
+          <p class="card-text"> ${precio}</p>
+          <ItemCount initial={1} stock={stock} setCount={setCount} />
+          <button className="btn btn-success comprar" disabled={stock <= 0} onClick={handleBuyClick}>Buy</button>
+          <Link to={`/Detalle/${id}`} className='Opciones'>
+            <button className='btn bg-white btn-black text-center'>Details</button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default Items
+
+export default Items;
