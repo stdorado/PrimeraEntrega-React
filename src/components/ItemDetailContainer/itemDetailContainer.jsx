@@ -1,28 +1,39 @@
-import {useState, useEffect} from "react"
-import ItemDetail from "../ItemDetail/ItemDetail"
-import { useParams } from "react-router-dom"
-import { getProductosById } from "../asyncMocks/data"
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import ItemDetail from '../ItemDetail/ItemDetail';
+import { getProductData } from '../../Services/Firebase';
 
-const ItemDetailContainer = () => {
-    const [product, setProduct] = useState(null)
+function ItemDetailContainer() {
+  const { itemId } = useParams();
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const product = await getProductData(itemId);
+        setSelectedProduct(product);
+      } catch (error) { 
+      }
+    };
 
-    const { itemId } = useParams()
+    fetchProduct();
+  }, [itemId]);
 
-    useEffect(() => {
-        getProductosById(itemId)
-            .then(response => {
-                setProduct(response)
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    }, [itemId])
-
-    return(
-        <div className="ItemDetailContainer">
-            <ItemDetail {...product} />
-        </div>
-    )
+  if (selectedProduct) {
+    return (
+      <div>
+        <ItemDetail
+          id={selectedProduct.id}
+          imagen={selectedProduct.imagen}
+          nombre={selectedProduct.nombre}
+          descripcion={selectedProduct.descripcion}
+          precio={parseFloat(selectedProduct.precio)} 
+          stock={selectedProduct.stock}
+        />
+      </div>
+    );
+  } else {
+    return <p>No se Encontro ningun Producto</p>;
+  }
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

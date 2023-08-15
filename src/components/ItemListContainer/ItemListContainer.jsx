@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductosByCategoria } from '../asyncMocks/data';
+import { getProductsByCategory, getAllProducts } from '../../Services/Firebase'; 
 import ItemList from '../ItemList/itemList';
 
 function ItemListContainer() {
@@ -9,7 +9,14 @@ function ItemListContainer() {
 
   const fetchProductos = useCallback(async () => {
     try {
-      const productos = await getProductosByCategoria(categoriaId);
+      let productos = [];
+
+      if (categoriaId) {
+        productos = await getProductsByCategory(categoriaId);
+      } else {
+        productos = await getAllProducts();
+      }
+
       setData(productos);
     } catch (error) {
       console.error(error);
@@ -21,6 +28,7 @@ function ItemListContainer() {
   }, [fetchProductos]);
 
   const onAdd = (Valor) => {
+    //agregar Alerta de compraste
     console.log('compraste', Valor);
   };
 
@@ -30,4 +38,5 @@ function ItemListContainer() {
     </div>
   );
 }
-export default ItemListContainer
+
+export default ItemListContainer;

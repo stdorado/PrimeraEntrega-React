@@ -2,7 +2,8 @@
 
 
 .fondoBarra{
-  background-color: rgba(0, 0, 0, 0.932);
+  background-color: rgba(255, 255, 255, 0.932);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.454); 
 }
 
 
@@ -13,4 +14,22 @@
 }
 .nav-item{
   padding-left: 90%;
+}
+.one:hover{
+  background-color: rgb(255, 98, 0);
+  border-radius: 30px;
+}
+
+.two:hover{
+  background-color: chartreuse;
+  border-radius: 30px;
+}
+
+.tree:hover{
+    background-color: rgb(255, 0, 0);
+    border-radius: 30px;
+}
+.four:hover{
+  background-color: rgb(113, 157, 227);
+  border-radius: 30px;
 }

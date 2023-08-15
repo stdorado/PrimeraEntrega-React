@@ -4,8 +4,20 @@
     justify-content: space-around;
     width: 400px;
     margin: 3.5%;
+    
 }
 
 .card{
     padding: 30px;
+    
+}
+
+.UbicacionDetalle{
+    position: relative;
+    right: 40px;
+    top: 37px;
+}
+
+.caract{
+    font-style: italic;
 }

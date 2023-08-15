@@ -1,0 +1,15 @@
+.Card{
+    text-align: center;
+    border: 2px solid black;
+}
+.disposicion{
+    display: inline-block;
+    justify-content: space-between;
+    margin: 40px;
+    position: relative;
+    left: 90px;
+}
+.CartImage{
+    width: 300px;
+    
+}
