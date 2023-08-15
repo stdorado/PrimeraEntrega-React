@@ -20,9 +20,7 @@ export function CartProvider({ children }) {
       } else {
         console.error("La cantidad supera el stock disponible");
       }
-    } else {
-      console.error("El Producto ya fue agregado");
-    }
+    } 
   };
 
   const EliminarItem = (itemId) => {

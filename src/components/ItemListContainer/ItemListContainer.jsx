@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductsByCategory, getAllProducts } from '../../Services/Firebase'; 
 import ItemList from '../ItemList/itemList';
+import swal from 'sweetalert'; 
 
 function ItemListContainer() {
   const [data, setData] = useState([]);
@@ -28,13 +29,16 @@ function ItemListContainer() {
   }, [fetchProductos]);
 
   const onAdd = (Valor) => {
-    //agregar Alerta de compraste
-    console.log('compraste', Valor);
+    mostrarAlerta(`¡Compraste ${Valor} producto(s)!`); 
+  };
+
+  const mostrarAlerta = (mensaje) => {
+    swal(mensaje, "", "success");
   };
 
   return (
     <div>
-      <ItemList data={data} />
+      <ItemList data={data} onAdd={onAdd} />
     </div>
   );
 }

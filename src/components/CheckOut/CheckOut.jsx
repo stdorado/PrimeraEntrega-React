@@ -71,8 +71,14 @@ const AlertadeError =()=>{
           <Link to="/"><button className="btn btn-success ubicacionBoton">Volver Al Inicio</button></Link>
         </div>
       ) : (
-        <form className="mt-3">
-          <h2>Completa el Formulario</h2>
+        <form className="Formulario">
+          <svg xmlns="http://www.w3.org/2000/svg" width="156" height="156" fill="green" className="bi bi-list-task centrar" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"/>
+  <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z"/>
+  <path fill-rule="evenodd" d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z"/>
+</svg>
+          <h2 className="text-center">Ya casi! estas a solo 1 paso</h2>
+          <h3 className="text-center" >Completa el Formulario Con tus datos!</h3>
           <div className="mb-3">
             <label htmlFor="nombre" className="form-label">
               Nombre Completo
@@ -109,6 +115,7 @@ const AlertadeError =()=>{
               onChange={onInputChange}
             />
           </div>
+          <div className="Espacio">
           <button
             disabled={
               !(
@@ -117,7 +124,7 @@ const AlertadeError =()=>{
                 buyer.email !== ""
               )
             }
-            className="btn btn-primary"
+            className="btn btn-success "
             onClick={handleCheckout}
           >
             Confirmar Compra
@@ -125,6 +132,7 @@ const AlertadeError =()=>{
           <button className="btn btn-secondary ms-2" onClick={resetForm}>
             Cancelar
           </button>
+          </div>
         </form>
       )}
     </div>

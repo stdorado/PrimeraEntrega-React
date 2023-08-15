@@ -12,4 +12,18 @@
 }
 .dispocion{
     margin-top: 200px;
+    margin-bottom: 160px;
+}
+.Espacio{
+    margin-bottom: 200px;
+}
+.Formulario{
+    margin-top: 100px;
+    width: 700px;
+    position: relative;
+    left: 300px;
+}
+.centrar{
+    position: relative;
+    left: 35%;
 }

@@ -28,7 +28,7 @@ function Cart() {
   };
 
   const mostrarAlerta = () => {
-    swal("Carro limpiado con éxito!", "", "success");
+    swal("Carro Vaciado con éxito!", "", "success");
   };
 
   if (totalQuantity() === 0) {
