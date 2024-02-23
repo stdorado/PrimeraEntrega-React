@@ -23,5 +23,5 @@ Tailwind CSS: Para el diseño y la estilización de nuestros componentes, lo que
 Inmobiliaria Don Mario se especializa en el alquiler de habitaciones, ofreciendo una amplia variedad de opciones para todos los gustos y presupuestos. Nuestra plataforma te permite explorar las propiedades disponibles, ver detalles como el precio y la ubicación, y contactarnos fácilmente para programar una visita o hacer una reserva.
 
 Estamos comprometidos a brindarte un servicio excepcional y a ayudarte a encontrar el lugar perfecto que puedas llamar hogar. ¡Esperamos poder asistirte en tu búsqueda y darte la bienvenida a tu nuevo hogar en Inmobiliaria Don Mario!
-------
+----------------------
 Inmobiliaria Don Mario - Tu socio confiable en alquiler de habitaciones
