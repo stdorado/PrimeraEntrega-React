@@ -10,7 +10,7 @@ Clona este repositorio o descarga los archivos ZIP.
 Abre la terminal y navega a la carpeta del proyecto: cd ruta/de/tu/proyecto.
 Ejecuta npm install para instalar las dependencias.
 Ejecuta npm start para iniciar la aplicación en el navegador.
-La aplicación se abrirá automáticamente en tu navegador. Si no lo hace, ve a http://localhost:3000 en tu navegador.
+La aplicación se abrirá automáticamente en tu navegador. Si no lo hace, ve a http://localhost:8080 en tu navegador.
 ## Tecnología Utilizada
 
 Utilizamos las siguientes tecnologías para ofrecerte la mejor experiencia:
